@@ -2,10 +2,10 @@ package IteratorsAndComparators.Book;
 
 import java.util.Iterator;
 
-public class Library  implements Iterable<Book> {
+public class LibraryIterator implements Iterable<Book> {
     private Book[] books;
 
-    public Library(Book... books) {
+    public LibraryIterator(Book... books) {
         this.books = books;
     }
 

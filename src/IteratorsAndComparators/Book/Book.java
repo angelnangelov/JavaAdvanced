@@ -1,11 +1,18 @@
 package IteratorsAndComparators.Book;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 
-public class Book  implements Iterable<Book>{
+public class Book implements Comparable<Book>{
+
+
+    public static class CompareBooksByYearsAscending implements Comparator<Book> {
+
+        @Override
+        public  int compare(Book first, Book second) {
+            return Integer.compare(first.getYear(),second.getYear());
+        }
+    }
+
     private String title;
     private int year;
     private List<String> authors;
@@ -47,7 +54,17 @@ public class Book  implements Iterable<Book>{
     }
 
     @Override
-    public Iterator<Book> iterator() {
-        return null;
+    public String toString() {
+        return "Book " +
+                "title " + title + '\'' +
+                ", year " + year +
+                ", authors " + authors ;
+    }
+
+    @Override
+    public int compareTo(Book o) {
+        int result =  Integer.compare(this.year,o.year);
+        return  result != 0 ? result : Integer.compare(this.year,o.year);
+
     }
 }
