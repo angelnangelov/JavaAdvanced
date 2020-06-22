@@ -1,7 +1,11 @@
 package com.company.StacksAndQueues;
 
+
 import java.util.ArrayDeque;
 import java.util.Collections;
+
+import java.util.ArrayDeque;
+
 import java.util.Scanner;
 
 public class BasicQueueOperations {
